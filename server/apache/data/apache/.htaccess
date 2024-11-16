@@ -1,0 +1,22 @@
+<FilesMatch ".(htaccess)">
+    AuthType Basic
+    AuthName "Only for admins"
+    AuthUserFile /etc/apache2/access/.htpasswd
+    AuthGroupFile /etc/apache2/access/.group
+    Require group admins
+</FilesMatch>
+
+<FilesMatch "(create|delete|read|upload|download_list).php">
+    AuthType Basic
+    AuthName "Require authorization"
+    AuthUserFile /etc/apache2/access/.htpasswd
+    Require valid-user
+</FilesMatch>
+
+<FilesMatch "(database|read_users|consts|core).php">
+    AuthType Basic
+    AuthName "Only for admins"
+    AuthUserFile /etc/apache2/access/.htpasswd
+    AuthGroupFile /etc/apache2/access/.group
+    Require group admins
+</FilesMatch>

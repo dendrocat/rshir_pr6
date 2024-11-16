@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;	
+}
+
+.nav {
+    margin: 30px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    
+    justify-content: space-evenly;
+}
+
+.space {
+    margin: 20px;
+}

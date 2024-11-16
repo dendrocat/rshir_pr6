@@ -1,0 +1,7 @@
+<FilesMatch "\.php">
+    AuthType Basic
+    AuthName "Only for admins"
+    AuthUserFile /etc/apache2/access/.htpasswd
+    AuthGroupFile /etc/apache2/access/.group
+    Require group admins
+</FilesMatch>
